@@ -144,7 +144,7 @@ describe("POST /dogs", () => {
     };
     const { data } = await post(`/dogs`, createData);
 
-    for (const key of ["id", "cheese"]) {
+    for (const key of ["cheese", "id"]) {
       expect(data.errors).toContain(
         `'${key}' is not a valid key`
       );
